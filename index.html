@@ -19,7 +19,7 @@
     <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- MICROSOFT CLARITY (Nuevo ID) -->
+    <!-- MICROSOFT CLARITY -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -47,6 +47,15 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <!-- UTMify Script -->
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+    <!-- End UTMify Script -->
+
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -54,13 +63,9 @@
             color: #333333;
         }
 
-        /* --- CORRECCIÓN DE FORMATO VERTICAL 9:16 --- */
+        /* --- FORMATO VERTICAL 9:16 --- */
         .video-wrapper {
             position: relative;
-            /* Matemática: (9 / 16) * 100 = 56.25% (Horizontal)
-               Matemática: (16 / 9) * 100 = 177.77% (Vertical)
-               Usamos 177.77% para que el contenedor sea alto y elimine las franjas negras.
-            */
             padding-bottom: 177.77%; 
             height: 0;
             overflow: hidden;
@@ -81,8 +86,8 @@
         
         .play-overlay {
             position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.4); /* Fondo más claro para ver la miniatura del video */
-            backdrop-filter: blur(2px); /* Efecto elegante */
+            background: rgba(0,0,0,0.4); 
+            backdrop-filter: blur(2px);
             display: flex; flex-direction: column;
             align-items: center; justify-content: center;
             z-index: 20; transition: opacity 0.3s;
@@ -174,7 +179,7 @@
 
     <main class="w-full max-w-3xl px-4 my-6 flex flex-col items-center">
         
-        <!-- Contenedor limitado en ancho para que en PC no sea gigante el video vertical -->
+        <!-- Video limitado en ancho para PC -->
         <div class="w-full max-w-[400px] relative shadow-2xl rounded-xl">
             <div class="video-wrapper">
                 <div id="startOverlay" class="play-overlay">
@@ -218,7 +223,7 @@
             </div>
         </div>
 
-        <!-- SECCIÓN DE OFERTA (Minuto 10:00) -->
+        <!-- SECCIÓN DE OFERTA (Minuto 10:52) -->
         <div id="offer-section" class="w-full mt-8 text-center bg-blue-50 p-6 md:p-10 rounded-2xl shadow-xl border-2 border-blue-100 relative overflow-hidden">
             
             <div class="arrows-down text-blue-600 text-4xl mb-4">
@@ -241,15 +246,15 @@
                 
                 <div class="flex flex-col items-center justify-center pt-2">
                     <div class="text-gray-500 font-bold text-xl mb-1">
-                        Precio Normal: <span class="price-strike text-red-500">69,99€</span>
+                        Precio Normal: <span class="price-strike text-red-500">$99.00</span>
                     </div>
                     
                     <div class="text-6xl font-black text-blue-700 tracking-tighter my-2">
-                        17<span class="text-3xl align-top font-bold">€</span>
+                        <span class="text-3xl align-top font-bold">$</span>37
                     </div>
                     
                     <div class="w-full bg-green-100 text-green-800 font-bold text-sm py-1 rounded mt-2">
-                        <i class="fas fa-check mr-1"></i> Ahorras 52,99€
+                        <i class="fas fa-check mr-1"></i> Ahorras $62.00
                     </div>
                 </div>
             </div>
